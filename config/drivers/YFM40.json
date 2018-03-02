@@ -1,0 +1,120 @@
+{
+	"id": "/YFM40",
+	"class": "lock",
+	"name": {
+		"en": "Yale Fingerprint Mortise Lock YFM40"
+	},
+	"capabilities": ["locked"],
+	"images": {
+		"large": "/drivers//YFM40/assets/images/large.png",
+		"small": "/drivers//YFM40/assets/images/small.png"
+	},
+	"zwave": {
+		"manufacturerId": [297],
+		"productTypeId": [6],
+		"productId": [0],
+    "requireSecure": true,
+    "learnmode": {
+      "image": "/drivers//YFM40/assets/learnmode.svg",
+      "instruction": {
+        "en": "Enter your master pin and press R behind the lock, followed by 7# and 1#"
+      }
+    },
+    "unlearnmode": {
+      "image": "/drivers//YFM40/assets/learnmode.svg",
+      "instruction": {
+        "en": "Enter your master pin and press R behind the lock, followed by 7# and 3#"
+      }
+    },
+		"associationGroups": [1],
+		"associationGroupsOptions": {}
+	},
+  "settings": [
+    {
+      "id": "audio_mode",
+      "type": "dropdown",
+      "label": {
+        "en": "Audio mode"
+      },
+      "value": "1",
+      "hint": {
+        "en": "Whether the lock beeps or not. Some activities will beep regardless of this setting."
+      },
+      "values": [
+        {
+          "id": "1",
+          "label": {
+            "en": "Off"
+          }
+        },
+        {
+          "id": "3",
+          "label": {
+            "en": "On"
+          }
+        }
+      ]
+    },
+    {
+      "id": "max_tries",
+      "type": "number",
+      "label": {
+        "en": "Maximum number of tries"
+      },
+      "attr": {
+        "min": 1,
+        "max": 7
+      },
+      "value": 5,
+      "hint": {
+        "en": "How many wrong code attempts are allowed before lockout and the tamper alarm is triggered. Max 7."
+      }
+    },
+    {
+      "id": "lockout_time",
+      "type": "number",
+      "label": {
+        "en": "Wrong code lockout time"
+      },
+      "attr": {
+        "min": 1,
+        "max": 254
+      },
+      "value": 60,
+      "hint": {
+        "en": "How long the lock will block further attempts to enter a code after the maximum number of tries has been exceeded. Min 1 sec max 254 secs."
+      }
+    },
+    {
+      "id": "operating_mode",
+      "type": "dropdown",
+      "label": {
+        "en": "Operating mode"
+      },
+      "value": "00",
+      "hint": {
+        "en": "You can disable all users except the master user with this option."
+      },
+      "values": [
+        {
+          "id": "0",
+          "label": {
+            "en": "Normal"
+          }
+        },
+        {
+          "id": "1",
+          "label": {
+            "en": "Vacation Mode - all user codes disabled"
+          }
+        },
+        {
+          "id": "2",
+          "label": {
+            "en": "Privacy Mode - all user codes and remote lock/unlock disabled"
+          }
+        }
+      ]
+    }
+  ]
+}
