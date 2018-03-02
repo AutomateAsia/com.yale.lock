@@ -1,0 +1,26 @@
+{
+	"name": "com.yale.lock",
+	"version": "1.0.0",
+	"description": "This app adds support for the Z-wave enabled lock made by Yale.",
+	"main": "app.js",
+	"requires": true,
+	"dependencies": {
+		"homey-log": "^1.0.1",
+		"homey-meshdriver": "^1.2.4"
+	},
+	"devDependencies": {},
+	"scripts": {
+		"run": "homeyConfig compose && athom project --run",
+		"test": "echo \"Error: no test specified\" && exit 1"
+	},
+	"repository": {
+		"type": "git",
+		"url": "git+https://github.com/AutomateAsia/com.yale.lock.git"
+	},
+	"author": "Mike Lim",
+	"license": "ISC",
+	"bugs": {
+		"url": "https://github.com/AutomateAsia/com.yale.lock/issues"
+	},
+	"homepage": ""
+}

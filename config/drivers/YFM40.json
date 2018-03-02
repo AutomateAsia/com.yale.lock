@@ -6,8 +6,8 @@
 	},
 	"capabilities": ["locked"],
 	"images": {
-		"large": "/drivers//YFM40/assets/images/large.png",
-		"small": "/drivers//YFM40/assets/images/small.png"
+		"large": "/drivers/YFM40/assets/images/large.jpg",
+		"small": "/drivers/YFM40/assets/images/small.jpg"
 	},
 	"zwave": {
 		"manufacturerId": [297],
@@ -15,13 +15,13 @@
 		"productId": [0],
     "requireSecure": true,
     "learnmode": {
-      "image": "/drivers//YFM40/assets/learnmode.svg",
+      "image": "/drivers/YFM40/assets/learnmode.svg",
       "instruction": {
         "en": "Enter your master pin and press R behind the lock, followed by 7# and 1#"
       }
     },
     "unlearnmode": {
-      "image": "/drivers//YFM40/assets/learnmode.svg",
+      "image": "/drivers/YFM40/assets/learnmode.svg",
       "instruction": {
         "en": "Enter your master pin and press R behind the lock, followed by 7# and 3#"
       }

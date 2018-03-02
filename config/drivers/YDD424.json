@@ -6,8 +6,8 @@
 	},
 	"capabilities": ["locked"],
 	"images": {
-		"large": "/drivers/YDD424/assets/images/large.png",
-		"small": "/drivers/YDD424/assets/images/small.png"
+		"large": "/drivers/YDD424/assets/images/large.jpg",
+		"small": "/drivers/YDD424/assets/images/small.jpg"
 	},
 	"zwave": {
 		"manufacturerId": [297],

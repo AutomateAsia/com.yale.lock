@@ -14,6 +14,10 @@
     "name": "Mike Lim",
     "email": "mike.lim@automate.asia"
   },
+  "images": {
+    "large": "/assets/images/large.jpg",
+    "small": "/assets/images/small.jpg"
+  },
   "flow": {
     "triggers": [
       {
@@ -189,8 +193,8 @@
         "locked"
       ],
       "images": {
-        "large": "/drivers/YDD424/assets/images/large.png",
-        "small": "/drivers/YDD424/assets/images/small.png"
+        "large": "/drivers/YDD424/assets/images/large.jpg",
+        "small": "/drivers/YDD424/assets/images/small.jpg"
       },
       "zwave": {
         "manufacturerId": [
@@ -319,8 +323,8 @@
         "locked"
       ],
       "images": {
-        "large": "/drivers//YFM40/assets/images/large.png",
-        "small": "/drivers//YFM40/assets/images/small.png"
+        "large": "/drivers/YFM40/assets/images/large.jpg",
+        "small": "/drivers/YFM40/assets/images/small.jpg"
       },
       "zwave": {
         "manufacturerId": [
@@ -334,13 +338,13 @@
         ],
         "requireSecure": true,
         "learnmode": {
-          "image": "/drivers//YFM40/assets/learnmode.svg",
+          "image": "/drivers/YFM40/assets/learnmode.svg",
           "instruction": {
             "en": "Enter your master pin and press R behind the lock, followed by 7# and 1#"
           }
         },
         "unlearnmode": {
-          "image": "/drivers//YFM40/assets/learnmode.svg",
+          "image": "/drivers/YFM40/assets/learnmode.svg",
           "instruction": {
             "en": "Enter your master pin and press R behind the lock, followed by 7# and 3#"
           }
@@ -449,8 +453,8 @@
         "locked"
       ],
       "images": {
-        "large": "/drivers/YRD220/assets/images/large.png",
-        "small": "/drivers/YRD220/assets/images/small.png"
+        "large": "/drivers/YRD220/assets/images/large.jpg",
+        "small": "/drivers/YRD220/assets/images/small.jpg"
       },
       "zwave": {
         "manufacturerId": [

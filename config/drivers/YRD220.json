@@ -6,8 +6,8 @@
 	},
 	"capabilities": ["locked"],
 	"images": {
-		"large": "/drivers/YRD220/assets/images/large.png",
-		"small": "/drivers/YRD220/assets/images/small.png"
+		"large": "/drivers/YRD220/assets/images/large.jpg",
+		"small": "/drivers/YRD220/assets/images/small.jpg"
 	},
 	"zwave": {
 		"manufacturerId": [297],
