@@ -335,7 +335,8 @@
           7
         ],
         "productId": [
-          0
+          0,
+          1
         ],
         "requireSecure": true,
         "learnmode": {
