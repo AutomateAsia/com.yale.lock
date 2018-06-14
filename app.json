@@ -8,7 +8,7 @@
     "en": "Adds support for Yale Digital Locks"
   },
   "category": "security",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "compatibility": ">=1.5.0",
   "author": {
     "name": "Mike Lim",
@@ -201,10 +201,12 @@
           297
         ],
         "productTypeId": [
-          199
+          199,
+          255
         ],
         "productId": [
-          0
+          0,
+          65535
         ],
         "requireSecure": true,
         "learnmode": {
@@ -332,22 +334,24 @@
         ],
         "productTypeId": [
           6,
-          7
+          7,
+          199
         ],
         "productId": [
-          0
+          0,
+          5
         ],
         "requireSecure": true,
         "learnmode": {
           "image": "/drivers/YFM40/assets/learnmode.svg",
           "instruction": {
-            "en": "Enter your master pin and press R behind the lock, followed by 7# and 1#"
+            "en": "Enter your master pin and press R behind the lock, followed by 9# and 1#"
           }
         },
         "unlearnmode": {
           "image": "/drivers/YFM40/assets/learnmode.svg",
           "instruction": {
-            "en": "Enter your master pin and press R behind the lock, followed by 7# and 3#"
+            "en": "Enter your master pin and press R behind the lock, followed by 9# and 3#"
           }
         },
         "associationGroups": [
