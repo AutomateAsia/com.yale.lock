@@ -13,7 +13,7 @@ Currently supports EU version of the following devices:
 7. YD-01-CON
 
 ## Notes:
-1. YDM316, YKFCON and YD-01-CON was added based on request on Github. We do not have the lock for testing. Please log the issues to https://github.com/AutomateAsia/com.yale.lock
+1. YDM3168, YKFCON and YD-01-CON was added based on request on Github. We do not have the lock for testing. Please log the issues to https://github.com/AutomateAsia/com.yale.lock
 2. YFM40, YDM3168 and YDM4109 does not send status update upon locking by thumbturn. This is not a Homey issue as they behave the same as the Z-Wave hub like Vera and FIBARO.
 3. Fingerprint unlock does not send status update to any Z-Wave hub. This is not a Homey issue as they behave the same as the Z-Wave hub like Vera and FIBARO.
 4. This app will make Homey poll on fixed interval (60s) now to address point 3 and 4. The setting page will be make available in following releases.
