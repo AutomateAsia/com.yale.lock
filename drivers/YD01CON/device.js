@@ -3,7 +3,7 @@
 const Homey = require('homey');
 const ZwaveDevice = require('homey-meshdriver').ZwaveDevice;
 
-class YFM40 extends ZwaveDevice {
+class YKFCON extends ZwaveDevice {
 	onMeshInit() {
 
 		// enable debugging
@@ -145,4 +145,4 @@ class YFM40 extends ZwaveDevice {
 	}
 }
 
-module.exports = YFM40;
+module.exports = YKFCON;

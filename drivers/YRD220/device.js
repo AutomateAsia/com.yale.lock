@@ -16,6 +16,7 @@ class YRD220 extends ZwaveDevice {
 		this.registerCapability('locked', 'DOOR_LOCK',{
 			getOpts: {
 				getOnStart : true,
+				pollInterval : 300000
 			},
 			get: 'DOOR_LOCK_OPERATION_GET',
 			set: 'DOOR_LOCK_OPERATION_SET',
@@ -34,7 +35,7 @@ class YRD220 extends ZwaveDevice {
 
 		let homey_locked = new Homey.FlowCardTriggerDevice('homey_locked');
 		homey_locked.register();
-		
+
 		let manual_unlocked = new Homey.FlowCardTriggerDevice('manual_unlocked');
 		manual_unlocked.register();
 
@@ -70,11 +71,6 @@ class YRD220 extends ZwaveDevice {
 						}
 					}
 
-					if (report['Alarm Type'] == '24' && report.hasOwnProperty("Alarm Level")) {
-						//lock via Homey
-						return true;
-					}
-
 					if (report['Alarm Type'] == '19' && report.hasOwnProperty("Alarm Level")) {
 						//unlock by pin
 						const tokens = {
@@ -93,11 +89,13 @@ class YRD220 extends ZwaveDevice {
 
 					if (report['Alarm Type'] == '24' && report.hasOwnProperty("Alarm Level")) {
 						//locked via Homey
-						return false;
+						homey_locked.trigger(this, null, null);
+						return true;
 					}
 
 					if (report['Alarm Type'] == '25' && report.hasOwnProperty("Alarm Level")) {
 						//unlock via Homey
+						homey_unlocked.trigger(this, null, null);
 						return false;
 					}
 

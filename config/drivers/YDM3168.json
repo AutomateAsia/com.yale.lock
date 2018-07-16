@@ -1,0 +1,35 @@
+{
+	"id": "YDM3168",
+	"class": "lock",
+	"name": {
+		"en": "YDM3168 Mortise Lock"
+	},
+	"capabilities": ["locked"],
+	"images": {
+		"large": "/drivers/YDM3168/assets/images/large.jpg",
+		"small": "/drivers/YDM3168/assets/images/small.jpg"
+	},
+	"zwave": {
+		"manufacturerId": [297],
+		"productTypeId": [64],
+		"productId": [0,5],
+    "requireSecure": true,
+    "learnmode": {
+      "image": "/drivers/YDM3168/assets/learnmode.svg",
+      "instruction": {
+        "en": "Enter menu mode [R,#,Master Pin,#], followed by 6# and 1#"
+      }
+    },
+    "unlearnmode": {
+      "image": "/drivers/YDM3168/assets/learnmode.svg",
+      "instruction": {
+        "en": "Enter menu mode [R,#,Master Pin,#], followed by 6# and 3#"
+      }
+    },
+		"associationGroups": [1],
+		"associationGroupsOptions": {}
+	},
+  "settings": [
+
+  ]
+}

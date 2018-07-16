@@ -16,6 +16,7 @@ class YDD424 extends ZwaveDevice {
 		this.registerCapability('locked', 'DOOR_LOCK',{
 			getOpts: {
 				getOnStart : true,
+				pollInterval : 60000
 			},
 			get: 'DOOR_LOCK_OPERATION_GET',
 			set: 'DOOR_LOCK_OPERATION_SET',
@@ -32,20 +33,17 @@ class YDD424 extends ZwaveDevice {
 		let manual_unlocked = new Homey.FlowCardTriggerDevice('manual_unlocked');
 		manual_unlocked.register();
 
+		let manual_locked = new Homey.FlowCardTriggerDevice('manual_locked');
+		manual_locked.register();
+
 		let user_unlocked = new Homey.FlowCardTriggerDevice('user_unlocked');
 		user_unlocked.register();
 
 		let touchpad_unlocked = new Homey.FlowCardTriggerDevice('touchpad_unlocked');
 		touchpad_unlocked.register();
 
-		let manual_locked = new Homey.FlowCardTriggerDevice('manual_locked');
-		manual_locked.register();
-
 		let touchpad_locked = new Homey.FlowCardTriggerDevice('touchpad_locked');
 		touchpad_locked.register();
-
-		let tamper_alarm = new Homey.FlowCardTriggerDevice('tamper_alarm');
-		tamper_alarm.register();
 
 		let button_unlocked = new Homey.FlowCardTriggerDevice('button_unlocked');
 		button_unlocked.register();
@@ -53,33 +51,24 @@ class YDD424 extends ZwaveDevice {
 		let button_locked = new Homey.FlowCardTriggerDevice('button_locked');
 		button_locked.register();
 
+		let homey_unlocked = new Homey.FlowCardTriggerDevice('homey_unlocked');
+		homey_unlocked.register();
+
+		let homey_locked = new Homey.FlowCardTriggerDevice('homey_locked');
+		homey_locked.register();
+
+		let auto_locked = new Homey.FlowCardTriggerDevice('auto_locked');
+		auto_locked.register();
+
+		let tamper_alarm = new Homey.FlowCardTriggerDevice('tamper_alarm');
+		tamper_alarm.register();
+
+
 		this.registerCapability('locked', 'ALARM', {
 			report: 'ALARM_REPORT',
 			reportParser(report) {
+
 				if (report.hasOwnProperty("Alarm Type")) {
-					if (report['Alarm Type'] == '21' && report.hasOwnProperty("Alarm Level")) {
-						//lock from back
-						if (report['Alarm Level'] == '1'){
-							manual_locked.trigger(this, null, null);
-							return true;
-						}
-						//lock from front
-						if (report['Alarm Level'] == '2'){
-							touchpad_locked.trigger(this, null, null);
-							return true;
-						}
-
-						//lock by button
-						if (report['Alarm Level'] == '3'){
-							button_locked.trigger(this, null, null);
-							return true;
-						}
-					}
-
-					if (report['Alarm Type'] == '24' && report.hasOwnProperty("Alarm Level")) {
-						//lock via Homey
-						return true;
-					}
 
 					if (report['Alarm Type'] == '19' && report.hasOwnProperty("Alarm Level")) {
 						//unlock by pin
@@ -91,10 +80,27 @@ class YDD424 extends ZwaveDevice {
 						return false;
 					}
 
+					if (report['Alarm Type'] == '21' && report.hasOwnProperty("Alarm Level")) {
+						//lock from back
+						if (report['Alarm Level'] == '1'){
+							manual_locked.trigger(this, null, null);
+						}
+						//lock from front
+						if (report['Alarm Level'] == '2'){
+							touchpad_locked.trigger(this, null, null);
+						}
+						//lock by button
+						if (report['Alarm Level'] == '3'){
+							button_locked.trigger(this, null, null);
+						}
+						return true;
+					}
+
 					if (report['Alarm Type'] == '22' && report.hasOwnProperty("Alarm Level")) {
 						if (report['Alarm Level'] == '2'){
 							button_unlocked.trigger(this, null, null);
 						}else{
+							//report['Alarm Level'] == '1'
 							//unlock by thumbturn
 							manual_unlocked.trigger(this, null, null);
 						}
@@ -103,12 +109,23 @@ class YDD424 extends ZwaveDevice {
 
 					if (report['Alarm Type'] == '24' && report.hasOwnProperty("Alarm Level")) {
 						//locked via Homey
-						return false;
+						homey_locked.trigger(this, null, null);
+						return true;
 					}
 
 					if (report['Alarm Type'] == '25' && report.hasOwnProperty("Alarm Level")) {
 						//unlock via Homey
+						homey_unlocked.trigger(this, null, null);
 						return false;
+					}
+
+					if (report['Alarm Type'] == '27' && report.hasOwnProperty("Alarm Level")) {
+						if (report['Alarm Level'] == '1'){
+							//autolocked
+							auto_locked.trigger(this, null, null);
+						}
+						return true;
+
 					}
 
 					if (report['Alarm Type'] == '161' && report.hasOwnProperty("Alarm Level")) {
@@ -120,6 +137,7 @@ class YDD424 extends ZwaveDevice {
 						return null;
 					}
 				}
+
 				return null;
 			}
 		});

@@ -1,0 +1,35 @@
+{
+	"id": "YD01CON",
+	"class": "lock",
+	"name": {
+		"en": "YD-01-CON Smart Living"
+	},
+	"capabilities": ["locked"],
+	"images": {
+		"large": "/drivers/YD01CON/assets/images/large.jpg",
+		"small": "/drivers/YD01CON/assets/images/small.jpg"
+	},
+	"zwave": {
+		"manufacturerId": [297],
+		"productTypeId": [7],
+		"productId": [1],
+    "requireSecure": true,
+    "learnmode": {
+      "image": "/drivers/YD01CON/assets/learnmode.svg",
+      "instruction": {
+        "en": "Enter Master Pin, #, followed by 4# and 1#"
+      }
+    },
+    "unlearnmode": {
+      "image": "/drivers/YD01CON/assets/learnmode.svg",
+      "instruction": {
+        "en": "Enter Master Pin, #, followed by 4# and 3#"
+      }
+    },
+		"associationGroups": [1],
+		"associationGroupsOptions": {}
+	},
+  "settings": [
+
+  ]
+}

@@ -1,0 +1,35 @@
+{
+	"id": "YKFCON",
+	"class": "lock",
+	"name": {
+		"en": "YKFCON Keyfree Connected"
+	},
+	"capabilities": ["locked"],
+	"images": {
+		"large": "/drivers/YKFCON/assets/images/large.jpg",
+		"small": "/drivers/YKFCON/assets/images/small.jpg"
+	},
+	"zwave": {
+		"manufacturerId": [297],
+		"productTypeId": [6],
+		"productId": [0],
+    "requireSecure": true,
+    "learnmode": {
+      "image": "/drivers/YKFCON/assets/learnmode.svg",
+      "instruction": {
+        "en": "Enter Master Pin, #, followed by 4# and 1#"
+      }
+    },
+    "unlearnmode": {
+      "image": "/drivers/YKFCON/assets/learnmode.svg",
+      "instruction": {
+        "en": "Enter Master Pin, #, followed by 4# and 3#"
+      }
+    },
+		"associationGroups": [1],
+		"associationGroupsOptions": {}
+	},
+  "settings": [
+
+  ]
+}

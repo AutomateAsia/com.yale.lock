@@ -29,7 +29,7 @@
           {
             "name": "device",
             "type": "device",
-            "filter": "driver_id=YRD220|YDD424|YFM40"
+            "filter": "driver_id=YRD220|YDD424|YFM40|YDM3168|YKFCON"
           }
         ]
       },
@@ -42,7 +42,7 @@
           {
             "name": "device",
             "type": "device",
-            "filter": "driver_id=YRD220|YDD424|YFM40"
+            "filter": "driver_id=YRD220|YDD424|YFM40|YDM3168|YKFCON"
           }
         ]
       },
@@ -55,7 +55,7 @@
           {
             "name": "device",
             "type": "device",
-            "filter": "driver_id=YRD220|YDD424|YFM40"
+            "filter": "driver_id=YRD220|YDD424|YFM40|YDM3168|YKFCON"
           }
         ]
       },
@@ -68,7 +68,7 @@
           {
             "name": "device",
             "type": "device",
-            "filter": "driver_id=YRD220|YDD424|YFM40"
+            "filter": "driver_id=YRD220|YDD424|YFM40|YDM3168|YKFCON"
           }
         ]
       },
@@ -93,7 +93,7 @@
           {
             "name": "device",
             "type": "device",
-            "filter": "driver_id=YRD220|YDD424|YFM40"
+            "filter": "driver_id=YRD220|YDD424|YFM40|YDM3168|YKFCON"
           }
         ]
       },
@@ -106,7 +106,7 @@
           {
             "name": "device",
             "type": "device",
-            "filter": "driver_id=YRD220|YDD424|YFM40"
+            "filter": "driver_id=YRD220|YDD424|YFM40|YDM3168|YKFCON"
           }
         ]
       },
@@ -119,7 +119,7 @@
           {
             "name": "device",
             "type": "device",
-            "filter": "driver_id=YRD220|YDD424|YFM40"
+            "filter": "driver_id=YRD220|YDD424|YFM40|YDM3168|YKFCON"
           }
         ]
       },
@@ -132,7 +132,7 @@
           {
             "name": "device",
             "type": "device",
-            "filter": "driver_id=YDD424|YFM40"
+            "filter": "driver_id=YDD424"
           }
         ]
       },
@@ -145,7 +145,20 @@
           {
             "name": "device",
             "type": "device",
-            "filter": "driver_id=YDD424|YFM40"
+            "filter": "driver_id=YDD424"
+          }
+        ]
+      },
+      {
+        "id": "auto_locked",
+        "title": {
+          "en": "Auto Locked"
+        },
+        "args": [
+          {
+            "name": "device",
+            "type": "device",
+            "filter": "driver_id=YDD424|YFM40|YDM3168"
           }
         ]
       },
@@ -158,7 +171,7 @@
           {
             "name": "device",
             "type": "device",
-            "filter": "driver_id=YRD220|YDD424|YFM40"
+            "filter": "driver_id=YRD220|YDD424|YFM40|YDM3168"
           },
           {
             "name": "alarmtype",
@@ -184,10 +197,53 @@
   },
   "drivers": [
     {
+      "id": "YD01CON",
+      "class": "lock",
+      "name": {
+        "en": "YD-01-CON Smart Living"
+      },
+      "capabilities": [
+        "locked"
+      ],
+      "images": {
+        "large": "/drivers/YD01CON/assets/images/large.jpg",
+        "small": "/drivers/YD01CON/assets/images/small.jpg"
+      },
+      "zwave": {
+        "manufacturerId": [
+          297
+        ],
+        "productTypeId": [
+          7
+        ],
+        "productId": [
+          1
+        ],
+        "requireSecure": true,
+        "learnmode": {
+          "image": "/drivers/YD01CON/assets/learnmode.svg",
+          "instruction": {
+            "en": "Enter Master Pin, #, followed by 4# and 1#"
+          }
+        },
+        "unlearnmode": {
+          "image": "/drivers/YD01CON/assets/learnmode.svg",
+          "instruction": {
+            "en": "Enter Master Pin, #, followed by 4# and 1#"
+          }
+        },
+        "associationGroups": [
+          1
+        ],
+        "associationGroupsOptions": {}
+      },
+      "settings": []
+    },
+    {
       "id": "YDD424",
       "class": "lock",
       "name": {
-        "en": "Yale Fingerprint Deadbolt YDD424"
+        "en": "YDD424 Fingerprint Deadbolt"
       },
       "capabilities": [
         "locked"
@@ -212,13 +268,13 @@
         "learnmode": {
           "image": "/drivers/YDD424/assets/learnmode.svg",
           "instruction": {
-            "en": "Enter your master pin and press R behind the lock, followed by 7# and 1#"
+            "en": "Enter your master pin and press R behind the lock, followed by 9# and 1#"
           }
         },
         "unlearnmode": {
           "image": "/drivers/YDD424/assets/learnmode.svg",
           "instruction": {
-            "en": "Enter your master pin and press R behind the lock, followed by 7# and 3#"
+            "en": "Enter your master pin and press R behind the lock, followed by 9# and 3#"
           }
         },
         "associationGroups": [
@@ -226,100 +282,100 @@
         ],
         "associationGroupsOptions": {}
       },
-      "settings": [
-        {
-          "id": "audio_mode",
-          "type": "dropdown",
-          "label": {
-            "en": "Audio mode"
-          },
-          "value": "1",
-          "hint": {
-            "en": "Whether the lock beeps or not. Some activities will beep regardless of this setting."
-          },
-          "values": [
-            {
-              "id": "1",
-              "label": {
-                "en": "Off"
-              }
-            },
-            {
-              "id": "3",
-              "label": {
-                "en": "On"
-              }
-            }
-          ]
-        },
-        {
-          "id": "max_tries",
-          "type": "number",
-          "label": {
-            "en": "Maximum number of tries"
-          },
-          "attr": {
-            "min": 1,
-            "max": 7
-          },
-          "value": 5,
-          "hint": {
-            "en": "How many wrong code attempts are allowed before lockout and the tamper alarm is triggered. Max 7."
-          }
-        },
-        {
-          "id": "lockout_time",
-          "type": "number",
-          "label": {
-            "en": "Wrong code lockout time"
-          },
-          "attr": {
-            "min": 1,
-            "max": 254
-          },
-          "value": 60,
-          "hint": {
-            "en": "How long the lock will block further attempts to enter a code after the maximum number of tries has been exceeded. Min 1 sec max 254 secs."
-          }
-        },
-        {
-          "id": "operating_mode",
-          "type": "dropdown",
-          "label": {
-            "en": "Operating mode"
-          },
-          "value": "00",
-          "hint": {
-            "en": "You can disable all users except the master user with this option."
-          },
-          "values": [
-            {
-              "id": "0",
-              "label": {
-                "en": "Normal"
-              }
-            },
-            {
-              "id": "1",
-              "label": {
-                "en": "Vacation Mode - all user codes disabled"
-              }
-            },
-            {
-              "id": "2",
-              "label": {
-                "en": "Privacy Mode - all user codes and remote lock/unlock disabled"
-              }
-            }
-          ]
-        }
-      ]
+      "settings": []
     },
     {
-      "id": "/YFM40",
+      "id": "YDM3168",
       "class": "lock",
       "name": {
-        "en": "Yale Fingerprint Mortise Lock YFM40"
+        "en": "YDM3168 Mortise Lock"
+      },
+      "capabilities": [
+        "locked"
+      ],
+      "images": {
+        "large": "/drivers/YDM3168/assets/images/large.jpg",
+        "small": "/drivers/YDM3168/assets/images/small.jpg"
+      },
+      "zwave": {
+        "manufacturerId": [
+          297
+        ],
+        "productTypeId": [
+          64
+        ],
+        "productId": [
+          0,
+          5
+        ],
+        "requireSecure": true,
+        "learnmode": {
+          "image": "/drivers/YDM3168/assets/learnmode.svg",
+          "instruction": {
+            "en": "Enter menu mode [R,#,Master Pin,#], followed by 6# and 1#"
+          }
+        },
+        "unlearnmode": {
+          "image": "/drivers/YDM3168/assets/learnmode.svg",
+          "instruction": {
+            "en": "Enter menu mode [R,#,Master Pin,#], followed by 6# and 3#"
+          }
+        },
+        "associationGroups": [
+          1
+        ],
+        "associationGroupsOptions": {}
+      },
+      "settings": []
+    },
+    {
+      "id": "YDM4109",
+      "class": "lock",
+      "name": {
+        "en": "YDM4109 Fingerprint Mortise Lock"
+      },
+      "capabilities": [
+        "locked"
+      ],
+      "images": {
+        "large": "/drivers/YDM4109/assets/images/large.jpg",
+        "small": "/drivers/YDM4109/assets/images/small.jpg"
+      },
+      "zwave": {
+        "manufacturerId": [
+          297
+        ],
+        "productTypeId": [
+          199
+        ],
+        "productId": [
+          5
+        ],
+        "requireSecure": true,
+        "learnmode": {
+          "image": "/drivers/YDM4109/assets/learnmode.svg",
+          "instruction": {
+            "en": "Enter your master pin and press R behind the lock, followed by 9# and 1#"
+          }
+        },
+        "unlearnmode": {
+          "image": "/drivers/YDM4109/assets/learnmode.svg",
+          "instruction": {
+            "en": "Enter your master pin and press R behind the lock, followed by 9# and 3#"
+          }
+        },
+        "associationGroups": [
+          1
+        ],
+        "associationGroupsOptions": {}
+      },
+      "settings": []
+    },
+    {
+      "id": "YFM40",
+      "class": "lock",
+      "name": {
+        "en": "YFM40 Fingerprint Mortise Lock"
       },
       "capabilities": [
         "locked"
@@ -333,9 +389,7 @@
           297
         ],
         "productTypeId": [
-          6,
-          7,
-          199
+          7
         ],
         "productId": [
           0,
@@ -359,100 +413,56 @@
         ],
         "associationGroupsOptions": {}
       },
-      "settings": [
-        {
-          "id": "audio_mode",
-          "type": "dropdown",
-          "label": {
-            "en": "Audio mode"
-          },
-          "value": "1",
-          "hint": {
-            "en": "Whether the lock beeps or not. Some activities will beep regardless of this setting."
-          },
-          "values": [
-            {
-              "id": "1",
-              "label": {
-                "en": "Off"
-              }
-            },
-            {
-              "id": "3",
-              "label": {
-                "en": "On"
-              }
-            }
-          ]
-        },
-        {
-          "id": "max_tries",
-          "type": "number",
-          "label": {
-            "en": "Maximum number of tries"
-          },
-          "attr": {
-            "min": 1,
-            "max": 7
-          },
-          "value": 5,
-          "hint": {
-            "en": "How many wrong code attempts are allowed before lockout and the tamper alarm is triggered. Max 7."
+      "settings": []
+    },
+    {
+      "id": "YKFCON",
+      "class": "lock",
+      "name": {
+        "en": "YKFCON Keyfree Connected"
+      },
+      "capabilities": [
+        "locked"
+      ],
+      "images": {
+        "large": "/drivers/YKFCON/assets/images/large.jpg",
+        "small": "/drivers/YKFCON/assets/images/small.jpg"
+      },
+      "zwave": {
+        "manufacturerId": [
+          297
+        ],
+        "productTypeId": [
+          6
+        ],
+        "productId": [
+          0
+        ],
+        "requireSecure": true,
+        "learnmode": {
+          "image": "/drivers/YKFCON/assets/learnmode.svg",
+          "instruction": {
+            "en": "Enter Master Pin, #, followed by 4# and 1#"
           }
         },
-        {
-          "id": "lockout_time",
-          "type": "number",
-          "label": {
-            "en": "Wrong code lockout time"
-          },
-          "attr": {
-            "min": 1,
-            "max": 254
-          },
-          "value": 60,
-          "hint": {
-            "en": "How long the lock will block further attempts to enter a code after the maximum number of tries has been exceeded. Min 1 sec max 254 secs."
+        "unlearnmode": {
+          "image": "/drivers/YKFCON/assets/learnmode.svg",
+          "instruction": {
+            "en": "Enter Master Pin, #, followed by 4# and 1#"
           }
         },
-        {
-          "id": "operating_mode",
-          "type": "dropdown",
-          "label": {
-            "en": "Operating mode"
-          },
-          "value": "00",
-          "hint": {
-            "en": "You can disable all users except the master user with this option."
-          },
-          "values": [
-            {
-              "id": "0",
-              "label": {
-                "en": "Normal"
-              }
-            },
-            {
-              "id": "1",
-              "label": {
-                "en": "Vacation Mode - all user codes disabled"
-              }
-            },
-            {
-              "id": "2",
-              "label": {
-                "en": "Privacy Mode - all user codes and remote lock/unlock disabled"
-              }
-            }
-          ]
-        }
-      ]
+        "associationGroups": [
+          1
+        ],
+        "associationGroupsOptions": {}
+      },
+      "settings": []
     },
     {
       "id": "YRD220",
       "class": "lock",
       "name": {
-        "en": "Yale Real Living YRD220"
+        "en": "YRD220 Real Living YRD220"
       },
       "capabilities": [
         "locked"
