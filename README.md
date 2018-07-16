@@ -23,15 +23,16 @@ Currently supports EU version of the following devices:
 2. Lock/Unlock by touchpad
 3. Unlock by specific user pin (the lock does not send status update for fingerprint unlock)
 4. Lock/Unlock by button (only for YDD424)
-5. Autolocked (only for locks that have mechanism to detect door closed, i.e YDD424 has a magnet, YDM3168 and YDM4109 has a spring latch)
+5. Autolocked (only for locks that have mechanism to detect door closed, i.e YDD424 has a magnet, YFM40, YDM3168 and YDM4109 has a spring latch)
 6. Tamper alarm
 
 ## Changelog:  
 
-### v1.0.2
+### v1.0.3
 * Added support for YDM4109, YDM3168, YKFCON and YKFCON     
 * Fixed typo on YFM40  
-* Updated inclusion instructions        
+* Updated inclusion instructions  
+* Group some of the product ID, product type ID into different locks. Re-inclusion may be required for some users.      
 
 ### v1.0.0
 * App store release
