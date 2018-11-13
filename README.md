@@ -5,12 +5,13 @@ Adds support for Yale Digital Locks
 Currently supports EU version of the following devices:
 
 1. YRD220
-2. YDD424
-3. YFM40
-4. YDM4109
-5. YDM3168
-6. YKFCON
-7. YD-01-CON
+2. YRD256
+3. YDD424
+4. YFM40
+5. YDM4109
+6. YDM3168
+7. YKFCON
+8. YD-01-CON
 
 ## Notes:
 1. YDM3168, YKFCON and YD-01-CON was added based on request on Github. We do not have the lock for testing. Please log the issues to https://github.com/AutomateAsia/com.yale.lock
@@ -28,6 +29,9 @@ Currently supports EU version of the following devices:
 6. Tamper alarm
 
 ## Changelog:  
+
+### v1.0.4
+* Added support for YRD256
 
 ### v1.0.3
 * Added support for YDM4109, YDM3168, YKFCON and YKFCON     
