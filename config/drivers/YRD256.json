@@ -1,0 +1,322 @@
+{
+      "id": "YRD256",
+      "class": "lock",
+      "name": {
+        "en": "Yale Real Living Assure Lock SL Key Free Touchscreen Deadbolt YRD256"
+      },
+      "capabilities": [
+        "locked"
+      ],
+      "images": {
+        "large": "/drivers/YRD256/assets/images/large.jpg",
+        "small": "/drivers/YRD256/assets/images/small.jpg"
+      },
+      "zwave": {
+        "manufacturerId": [
+          297
+        ],
+        "productTypeId": [
+          32770
+        ],
+        "productId": [
+          1536
+        ],
+        "requireSecure": true,
+        "learnmode": {
+          "image": "/drivers/YRD256/assets/learnmode.svg",
+          "instruction": {
+            "en": "Enter your master PIN and key in COG, followed by 7 COG and 1 COG."
+          }
+        },
+        "unlearnmode": {
+          "image": "/drivers/YRD256/assets/learnmode.svg",
+          "instruction": {
+            "en": "Enter your master PIN and key in COG, followed by 7 COG and 3 COG."
+          }
+        },
+        "associationGroups": [
+          1
+        ],
+        "associationGroupsOptions": {}
+      },
+      "settings": [
+        {
+          "id": "language",
+          "type": "dropdown",
+          "label": {
+            "en": "Language"
+          },
+          "zwave": {
+            "index": 5,
+            "size": 1
+          },
+          "value": "1",
+          "hint": {
+            "en": "Set the lock's langauge."
+          },
+          "values": [
+            {
+              "id": "1",
+              "label": {
+                "en": "English"
+              }
+            },
+            {
+              "id": "2",
+              "label": {
+                "en": "Spanish"
+              }
+            },
+            {
+              "id": "3",
+              "label": {
+                "en": "French"
+              }
+            }
+          ]
+        },
+        {
+          "id": "audio_mode",
+          "type": "dropdown",
+          "label": {
+            "en": "Audio Mode"
+          },
+          "zwave": {
+            "index": 1,
+            "size": 1
+          },
+          "value": "2",
+          "hint": {
+            "en": "Whether the lock beeps or not. Some activities will beep regardless of this setting."
+          },
+          "values": [
+            {
+              "id": "1",
+              "label": {
+                "en": "High Volume"
+              }
+            },
+            {
+              "id": "2",
+              "label": {
+                "en": "Low Volume"
+              }
+            },
+            {
+              "id": "3",
+              "label": {
+                "en": "Silent"
+              }
+            }
+          ]
+        },
+        {
+          "id": "auto_relock",
+          "type": "dropdown",
+          "label": {
+            "en": "Auto Re-lock"
+          },
+          "zwave": {
+            "index": 2,
+            "size": 1
+          },
+          "value": "0",
+          "hint": {
+            "en": "Enable or disable the auto re-lock feature."
+          },
+          "values": [
+            {
+              "id": "0",
+              "label": {
+                "en": "Off"
+              }
+            },
+            {
+              "id": "-1",
+              "label": {
+                "en": "On"
+              }
+            }
+          ]
+        },
+        {
+          "id": "auto_relock_time",
+          "type": "number",
+          "label": {
+            "en": "Auto Re-lock Delay"
+          },
+          "zwave": {
+            "index": 3,
+            "size": 1
+          },
+          "attr": {
+            "min": 10,
+            "max": 120
+          },
+          "value": 30,
+          "hint": {
+            "en": "Number of seconds before auto re-lock."
+          }
+        },
+        {
+          "id": "max_tries",
+          "type": "number",
+          "label": {
+            "en": "Wrong Code Entry Limit"
+          },
+          "zwave": {
+            "index": 4,
+            "size": 1
+          },
+          "attr": {
+            "min": 3,
+            "max": 10
+          },
+          "value": 5,
+          "hint": {
+            "en": "How many wrong code attempts are allowed before lockout and the tamper alarm is triggered. Max 10."
+          }
+        },
+        {
+          "id": "lockout_time",
+          "type": "number",
+          "label": {
+            "en": "Wrong Code Lockout Time"
+          },
+          "zwave": {
+            "index": 7,
+            "size": 1
+          },
+          "attr": {
+            "min": 10,
+            "max": 120
+          },
+          "value": 60,
+          "hint": {
+            "en": "How long the lock will block further attempts to enter a code after the maximum number of tries has been exceeded."
+          }
+        },
+        {
+          "id": "operating_mode",
+          "type": "dropdown",
+          "label": {
+            "en": "Operating mode"
+          },
+	  "zwave": {
+	    "index": 8,
+	    "size": 1
+          },
+          "value": "0",
+          "hint": {
+            "en": "You can disable all users except the master user with this option."
+          },
+          "values": [
+            {
+              "id": "0",
+              "label": {
+                "en": "Normal"
+              }
+            },
+            {
+              "id": "1",
+              "label": {
+                "en": "Vacation Mode - all user codes disabled."
+              }
+            },
+            {
+              "id": "2",
+              "label": {
+                "en": "Privacy Mode - all user codes and remote lock/unlock disabled."
+              }
+            }
+          ]
+        },
+        {
+          "id": "one_touch_locking",
+          "type": "dropdown",
+          "label": {
+            "en": "One Touch Locking"
+          },
+          "zwave": {
+            "index": 11,
+            "size": 1
+          },
+          "value": "-1",
+          "hint": {
+            "en": "Enable or disable one touch locking."
+          },
+          "values": [
+            {
+              "id": "0",
+              "label": {
+                "en": "Off"
+              }
+            },
+            {
+              "id": "-1",
+              "label": {
+                "en": "On"
+              }
+            }
+          ]
+        },
+        {
+          "id": "privacy_button",
+          "type": "dropdown",
+          "label": {
+            "en": "Privacy Button"
+          },
+          "zwave": {
+            "index": 12,
+            "size": 1
+          },
+          "value": "0",
+          "hint": {
+            "en": "Enable or disable the privacy button."
+          },
+          "values": [
+            {
+              "id": "0",
+              "label": {
+                "en": "Off"
+              }
+            },
+            {
+              "id": "-1",
+              "label": {
+                "en": "On"
+              }
+            }
+          ]
+        },
+        {
+          "id": "status_led",
+          "type": "dropdown",
+          "label": {
+            "en": "Lock Status LED"
+          },
+          "zwave": {
+            "index": 13,
+            "size": 1
+          },
+          "value": "0",
+          "hint": {
+            "en": "Enable or disable the status LED."
+          },
+          "values": [
+            {
+              "id": "0",
+              "label": {
+                "en": "Off"
+              }
+            },
+            {
+              "id": "-1",
+              "label": {
+                "en": "On"
+              }
+            }
+          ]
+        }
+      ]
+}
