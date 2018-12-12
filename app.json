@@ -8,11 +8,18 @@
     "en": "Adds support for Yale Digital Locks"
   },
   "category": "security",
-  "version": "1.0.4",
+  "version": "1.1.0",
   "compatibility": ">=1.5.0",
   "author": {
     "name": "Mike Lim",
     "email": "mike.lim@automate.asia"
+  },
+  "contributors": {
+    "developers": [
+      {
+        "name": "John Bothe"
+      }
+    ]
   },
   "images": {
     "large": "/assets/images/large.jpg",
@@ -29,7 +36,7 @@
           {
             "name": "device",
             "type": "device",
-            "filter": "driver_id=YRD256|YRD220|YDD424|YFM40|YDM3168|YKFCON"
+            "filter": "driver_id=YRD220|YRD256|YDD424|YFM40|YDM3168|YDM4109|YKFCON|YD01CON|YDCONL1|YDR446"
           }
         ]
       },
@@ -42,7 +49,7 @@
           {
             "name": "device",
             "type": "device",
-            "filter": "driver_id=YRD256|YRD220|YDD424|YFM40|YDM3168|YKFCON"
+            "filter": "driver_id=YRD220|YRD256|YDD424|YFM40|YDM3168|YDM4109|YKFCON|YD01CON|YDCONL1|YDR446"
           }
         ]
       },
@@ -55,7 +62,7 @@
           {
             "name": "device",
             "type": "device",
-            "filter": "driver_id=YRD256|YRD220|YDD424|YFM40|YDM3168|YKFCON"
+            "filter": "driver_id=YRD220|YRD256|YDD424|YFM40|YDM3168|YDM4109|YKFCON|YD01CON|YDCONL1|YDR446"
           }
         ]
       },
@@ -68,7 +75,7 @@
           {
             "name": "device",
             "type": "device",
-            "filter": "driver_id=YRD256|YRD220|YDD424|YFM40|YDM3168|YKFCON"
+            "filter": "driver_id=YRD220|YRD256|YDD424|YFM40|YDM3168|YDM4109|YKFCON|YD01CON|YDCONL1|YDR446"
           }
         ]
       },
@@ -93,7 +100,7 @@
           {
             "name": "device",
             "type": "device",
-            "filter": "driver_id=YRD256|YRD220|YDD424|YFM40|YDM3168|YKFCON"
+            "filter": "driver_id=YRD220|YRD256|YDD424|YFM40|YDM3168|YDM4109|YKFCON|YD01CON|YDCONL1|YDR446"
           }
         ]
       },
@@ -106,7 +113,7 @@
           {
             "name": "device",
             "type": "device",
-            "filter": "driver_id=YRD256|YRD220|YDD424|YFM40|YDM3168|YKFCON"
+            "filter": "driver_id=YRD220|YRD256|YDD424|YFM40|YDM3168|YDM4109|YKFCON|YD01CON|YDCONL1|YDR446"
           }
         ]
       },
@@ -119,7 +126,7 @@
           {
             "name": "device",
             "type": "device",
-            "filter": "driver_id=YRD256|YRD220|YDD424|YFM40|YDM3168|YKFCON"
+            "filter": "driver_id=YRD220|YRD256|YDD424|YFM40|YDM3168|YDM4109|YKFCON|YD01CON|YDCONL1|YDR446"
           }
         ]
       },
@@ -158,7 +165,7 @@
           {
             "name": "device",
             "type": "device",
-            "filter": "driver_id=YRD256|YDD424|YFM40|YDM3168"
+            "filter": "driver_id=YRD256|YDD424|YFM40|YDM3168|YDM4109|YKFCON|YD01CON|YDCONL1"
           }
         ]
       },
@@ -171,7 +178,7 @@
           {
             "name": "device",
             "type": "device",
-            "filter": "driver_id=YRD256|YRD220|YDD424|YFM40|YDM3168"
+            "filter": "driver_id=YRD220|YRD256|YDD424|YFM40|YDM3168|YDM4109|YKFCON|YD01CON|YDCONL1|YDR446"
           },
           {
             "name": "alarmtype",
@@ -229,7 +236,50 @@
         "unlearnmode": {
           "image": "/drivers/YD01CON/assets/learnmode.svg",
           "instruction": {
-            "en": "Enter Master Pin, #, followed by 4# and 1#"
+            "en": "Enter Master Pin, #, followed by 4# and 3#"
+          }
+        },
+        "associationGroups": [
+          1
+        ],
+        "associationGroupsOptions": {}
+      },
+      "settings": []
+    },
+    {
+      "id": "YDCONL1",
+      "class": "lock",
+      "name": {
+        "en": "Conexis L1"
+      },
+      "capabilities": [
+        "locked"
+      ],
+      "images": {
+        "large": "/drivers/YDCONL1/assets/images/large.jpg",
+        "small": "/drivers/YDCONL1/assets/images/small.jpg"
+      },
+      "zwave": {
+        "manufacturerId": [
+          297
+        ],
+        "productTypeId": [
+          26112
+        ],
+        "productId": [
+          2
+        ],
+        "requireSecure": true,
+        "learnmode": {
+          "image": "/drivers/YDCONL1/assets/learnmode.svg",
+          "instruction": {
+            "en": "Press ‘R’ 3 times within 1.5 sec"
+          }
+        },
+        "unlearnmode": {
+          "image": "/drivers/YDCONL1/assets/learnmode.svg",
+          "instruction": {
+            "en": "Press ‘R’ 3 times within 1.5 sec"
           }
         },
         "associationGroups": [
@@ -372,6 +422,49 @@
       "settings": []
     },
     {
+      "id": "YDR446",
+      "class": "lock",
+      "name": {
+        "en": "YDR446 Assure Lock Keyless"
+      },
+      "capabilities": [
+        "locked"
+      ],
+      "images": {
+        "large": "/drivers/YDR446/assets/images/large.jpg",
+        "small": "/drivers/YDR446/assets/images/small.jpg"
+      },
+      "zwave": {
+        "manufacturerId": [
+          297
+        ],
+        "productTypeId": [
+          2
+        ],
+        "productId": [
+          521
+        ],
+        "requireSecure": true,
+        "learnmode": {
+          "image": "/drivers/YDR446/assets/learnmode.svg",
+          "instruction": {
+            "en": "Enter Master Pin and press the setting (gear icon), followed by 7, setting, 1 setting"
+          }
+        },
+        "unlearnmode": {
+          "image": "/drivers/YDR446/assets/learnmode.svg",
+          "instruction": {
+            "en": "Enter Master Pin and press the setting (gear icon), followed by 7, setting, 3 setting"
+          }
+        },
+        "associationGroups": [
+          1
+        ],
+        "associationGroupsOptions": {}
+      },
+      "settings": []
+    },
+    {
       "id": "YFM40",
       "class": "lock",
       "name": {
@@ -448,7 +541,7 @@
         "unlearnmode": {
           "image": "/drivers/YKFCON/assets/learnmode.svg",
           "instruction": {
-            "en": "Enter Master Pin, #, followed by 4# and 1#"
+            "en": "Enter Master Pin, #, followed by 4# and 3#"
           }
         },
         "associationGroups": [
@@ -462,7 +555,7 @@
       "id": "YRD220",
       "class": "lock",
       "name": {
-        "en": "YRD220 Real Living YRD220"
+        "en": "YRD220 Real Living"
       },
       "capabilities": [
         "locked"
@@ -615,13 +708,13 @@
         "learnmode": {
           "image": "/drivers/YRD256/assets/learnmode.svg",
           "instruction": {
-            "en": "Enter your master PIN and key in GEAR, followed by 7 GEAR and 1 GEAR."
+            "en": "Enter your master PIN and key in COG, followed by 7 COG and 1 COG."
           }
         },
         "unlearnmode": {
           "image": "/drivers/YRD256/assets/learnmode.svg",
           "instruction": {
-            "en": "Enter your master PIN then GEAR, followed by 7 GEAR and 3 GEAR."
+            "en": "Enter your master PIN and key in COG, followed by 7 COG and 3 COG."
           }
         },
         "associationGroups": [
@@ -792,9 +885,9 @@
           "label": {
             "en": "Operating mode"
           },
-	  "zwave": {
-	    "index": 8,
-	    "size": 1
+          "zwave": {
+            "index": 8,
+            "size": 1
           },
           "value": "0",
           "hint": {

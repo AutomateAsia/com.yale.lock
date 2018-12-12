@@ -2,7 +2,7 @@
 	"id": "YRD220",
 	"class": "lock",
 	"name": {
-		"en": "YRD220 Real Living YRD220"
+		"en": "YRD220 Real Living"
 	},
 	"capabilities": ["locked"],
 	"images": {
