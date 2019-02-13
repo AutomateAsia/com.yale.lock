@@ -35,7 +35,7 @@ Currently supports EU version of the following devices:
 ## Changelog:  
 
 
-### v1.1.0
+### v1.1.1
 * Bug fixes
 * Added battery alarm
 
