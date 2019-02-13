@@ -443,10 +443,12 @@
           297
         ],
         "productTypeId": [
-          199
+          199,
+          50944
         ],
         "productId": [
-          5
+          5,
+          1280
         ],
         "requireSecure": true,
         "learnmode": {
