@@ -16,7 +16,6 @@ class YFM40 extends ZwaveDevice {
 		this.registerCapability('locked', 'DOOR_LOCK',{
 			getOpts: {
 				getOnStart : true,
-				pollInterval : 60000
 			},
 			get: 'DOOR_LOCK_OPERATION_GET',
 			set: 'DOOR_LOCK_OPERATION_SET',

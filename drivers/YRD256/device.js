@@ -15,7 +15,6 @@ class YRD256 extends ZwaveDevice {
 		this.registerCapability('locked', 'DOOR_LOCK',{
 			getOpts: {
 				getOnStart : true,
-				pollInterval : 300000
 			},
 			get: 'DOOR_LOCK_OPERATION_GET',
 			set: 'DOOR_LOCK_OPERATION_SET',
@@ -116,6 +115,7 @@ class YRD256 extends ZwaveDevice {
 						tamper_alarm.trigger(this, null, state);
 						return null;
 					}
+
 				}
 
 				return null;

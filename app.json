@@ -8,7 +8,7 @@
     "en": "Adds support for Yale Digital Locks"
   },
   "category": "security",
-  "version": "1.1.0",
+  "version": "1.1.1",
   "compatibility": ">=1.5.0",
   "author": {
     "name": "Mike Lim",
@@ -16,6 +16,9 @@
   },
   "contributors": {
     "developers": [
+      {
+        "name": "Mike Lim"
+      },
       {
         "name": "John Bothe"
       }
@@ -201,6 +204,43 @@
                 "id": "2",
                 "label": {
                   "en": "Lock damaged"
+                }
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "id": "battery_alarm",
+        "title": {
+          "en": "The battery alarm is set off"
+        },
+        "args": [
+          {
+            "name": "device",
+            "type": "device",
+            "filter": "driver_id=YRD220|YRD256|YDD424|YFM40|YDM3168|YDM4109|YKFCON|YD01CON|YDCONL1|YDR446"
+          },
+          {
+            "name": "alarmtype",
+            "type": "dropdown",
+            "values": [
+              {
+                "id": "1",
+                "label": {
+                  "en": "Low Battery"
+                }
+              },
+              {
+                "id": "2",
+                "label": {
+                  "en": "Critically Low Battery"
+                }
+              },
+              {
+                "id": "3",
+                "label": {
+                  "en": "Battery Too Low To Operate"
                 }
               }
             ]
