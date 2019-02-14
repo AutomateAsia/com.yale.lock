@@ -30,7 +30,7 @@ Currently supports EU version of the following devices:
 4. Lock/Unlock by button (only for YDD424)
 5. Autolocked (only for locks that have mechanism to detect door closed, i.e YDD424 has a magnet, YFM40, YDM3168 and YDM4109 has a spring latch)
 6. Tamper alarm
-7. Battery alarm
+7. Battery alarm (Based on Yale's standard 3 levels of battery reporting, not by battery %)
 
 ## Changelog:  
 
