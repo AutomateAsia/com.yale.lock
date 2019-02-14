@@ -1,6 +1,6 @@
 {
 	"name": "com.yale.lock",
-	"version": "1.1.0",
+	"version": "1.1.1",
 	"description": "This app adds support for the Z-wave enabled lock made by Yale.",
 	"main": "app.js",
 	"requires": true,
