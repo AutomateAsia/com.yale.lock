@@ -62,6 +62,9 @@ class YFM40 extends ZwaveDevice {
 		let tamper_alarm = new Homey.FlowCardTriggerDevice('tamper_alarm');
 		tamper_alarm.register();
 
+		let battery_alarm = new Homey.FlowCardTriggerDevice('battery_alarm');
+		battery_alarm.register();
+
 
 		this.registerCapability('locked', 'ALARM', {
 			report: 'ALARM_REPORT',
@@ -134,6 +137,33 @@ class YFM40 extends ZwaveDevice {
 						};
 						tamper_alarm.trigger(this, null, state);
 						return null;
+					}
+
+					if (report['Alarm Type'] == '167' && report.hasOwnProperty("Alarm Level")) {
+						// Low battery
+						const state = {
+							"alarmtype": '1'
+						};
+						battery_alarm.trigger(this, null, state);
+						return false;
+					}
+
+					if (report['Alarm Type'] == '168' && report.hasOwnProperty("Alarm Level")) {
+						// Critically low battery
+						const state = {
+							"alarmtype": '2'
+						};
+						battery_alarm.trigger(this, null, state);
+						return false;
+					}
+
+					if (report['Alarm Type'] == '169' && report.hasOwnProperty("Alarm Level")) {
+						// Battery too low to operate
+						const state = {
+							"alarmtype": '3'
+						};
+						battery_alarm.trigger(this, null, state);
+						return false;
 					}
 				}
 

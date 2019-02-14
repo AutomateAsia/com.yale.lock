@@ -111,30 +111,30 @@ class YRD220 extends ZwaveDevice {
 					}
 
 					if (report['Alarm Type'] == '167' && report.hasOwnProperty("Alarm Level")) {
-						// Low Battery
+						// Low battery
 						const state = {
 							"alarmtype": '1'
 						};
 						battery_alarm.trigger(this, null, state);
-						return false;
+						return null;
 					}
 
 					if (report['Alarm Type'] == '168' && report.hasOwnProperty("Alarm Level")) {
-						// Low Battery
+						// Critically low battery
 						const state = {
 							"alarmtype": '2'
 						};
 						battery_alarm.trigger(this, null, state);
-						return false;
+						return null;
 					}
 
 					if (report['Alarm Type'] == '169' && report.hasOwnProperty("Alarm Level")) {
-						// Low Battery
+						// Battery too low to operate
 						const state = {
 							"alarmtype": '3'
 						};
 						battery_alarm.trigger(this, null, state);
-						return false;
+						return null;
 					}
 
 				}
