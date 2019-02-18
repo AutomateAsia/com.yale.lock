@@ -11,8 +11,8 @@
 	},
 	"zwave": {
 		"manufacturerId": [297],
-		"productTypeId": [2],
-		"productId": [521],
+		"productTypeId": [2,32770],
+		"productId": [521,4096],
     "requireSecure": true,
     "learnmode": {
       "image": "/drivers/YDR446/assets/learnmode.svg",
