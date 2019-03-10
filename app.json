@@ -8,7 +8,7 @@
     "en": "Adds support for Yale Digital Locks"
   },
   "category": "security",
-  "version": "1.1.1",
+  "version": "1.1.2",
   "compatibility": ">=1.5.0",
   "author": {
     "name": "Mike Lim",
@@ -488,10 +488,12 @@
           297
         ],
         "productTypeId": [
-          2
+          2,
+          32770
         ],
         "productId": [
-          521
+          521,
+          4096
         ],
         "requireSecure": true,
         "learnmode": {
