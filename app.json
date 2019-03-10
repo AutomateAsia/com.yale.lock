@@ -488,10 +488,12 @@
           297
         ],
         "productTypeId": [
-          2
+          2,
+          32770
         ],
         "productId": [
-          521
+          521,
+          4096
         ],
         "requireSecure": true,
         "learnmode": {
