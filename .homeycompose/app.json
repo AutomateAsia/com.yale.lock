@@ -1,0 +1,38 @@
+{
+  "id": "com.yale.lock",
+  "sdk": 2,
+  "name": {
+    "en": "Yale Digital Lock"
+  },
+  "description": {
+    "en": "Adds support for Yale Digital Locks"
+  },
+  "category": "security",
+  "version": "1.2.0",
+  "compatibility": ">=1.5.0",
+  "author": {
+    "name": "Mike Lim",
+    "email": "mike.lim@automate.asia"
+  },
+  "contributors": {
+    "developers": [
+      {
+        "name": "Mike Lim"
+      },
+      {
+        "name": "John Bothe"
+      }
+    ]
+  },
+  "contributing": {
+    "donate": {
+      "paypal": {
+        "username": "limkopi78"
+      }
+    }
+  },
+  "images": {
+    "large": "/assets/images/large.jpg",
+    "small": "/assets/images/small.jpg"
+  }
+}

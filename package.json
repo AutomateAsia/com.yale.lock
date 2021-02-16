@@ -8,7 +8,6 @@
 		"homey-log": "^1.0.1",
 		"homey-meshdriver": "^1.3.24"
 	},
-	"devDependencies": {},
 	"scripts": {
 		"run": "homeyConfig compose && athom project --run",
 		"test": "echo \"Error: no test specified\" && exit 1"

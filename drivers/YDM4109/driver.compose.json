@@ -1,0 +1,44 @@
+{
+  "class": "lock",
+  "name": {
+    "en": "YDM4109 Fingerprint Mortise Lock"
+  },
+  "capabilities": [
+    "locked"
+  ],
+  "images": {
+    "large": "/drivers/YDM4109/assets/images/large.jpg",
+    "small": "/drivers/YDM4109/assets/images/small.jpg"
+  },
+  "zwave": {
+    "manufacturerId": [
+      297
+    ],
+    "productTypeId": [
+      199,
+      50944
+    ],
+    "productId": [
+      5,
+      1280
+    ],
+    "requireSecure": true,
+    "learnmode": {
+      "image": "/drivers/YDM4109/assets/learnmode.svg",
+      "instruction": {
+        "en": "Enter your master pin and press R behind the lock, followed by 9# and 1#"
+      }
+    },
+    "unlearnmode": {
+      "image": "/drivers/YDM4109/assets/learnmode.svg",
+      "instruction": {
+        "en": "Enter your master pin and press R behind the lock, followed by 9# and 3#"
+      }
+    },
+    "associationGroups": [
+      1
+    ],
+    "associationGroupsOptions": {}
+  },
+  "settings": []
+}

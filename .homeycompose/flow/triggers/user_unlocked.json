@@ -1,0 +1,25 @@
+{
+  "id": "user_unlocked",
+  "title": {
+    "en": "Unlocked by user"
+  },
+  "tokens": [
+    {
+      "name": "userid",
+      "type": "number",
+      "title": {
+        "en": "User ID"
+      },
+      "example": {
+        "en": "1"
+      }
+    }
+  ],
+  "args": [
+    {
+      "name": "device",
+      "type": "device",
+      "filter": "driver_id=YRD220|YRD256|YDD424|YFM40|YDM3168|YDM4109|YKFCON|YD01CON|YDCONL1|YDR446"
+    }
+  ]
+}

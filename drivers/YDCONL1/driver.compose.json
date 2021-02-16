@@ -1,0 +1,42 @@
+{
+  "class": "lock",
+  "name": {
+    "en": "Conexis L1"
+  },
+  "capabilities": [
+    "locked"
+  ],
+  "images": {
+    "large": "/drivers/YDCONL1/assets/images/large.jpg",
+    "small": "/drivers/YDCONL1/assets/images/small.jpg"
+  },
+  "zwave": {
+    "manufacturerId": [
+      297
+    ],
+    "productTypeId": [
+      26112
+    ],
+    "productId": [
+      2
+    ],
+    "requireSecure": true,
+    "learnmode": {
+      "image": "/drivers/YDCONL1/assets/learnmode.svg",
+      "instruction": {
+        "en": "Press ‘R’ 3 times within 1.5 sec"
+      }
+    },
+    "unlearnmode": {
+      "image": "/drivers/YDCONL1/assets/learnmode.svg",
+      "instruction": {
+        "en": "Press ‘R’ 3 times within 1.5 sec"
+      }
+    },
+    "associationGroups": [
+      1
+    ],
+    "associationGroupsOptions": {}
+  },
+  "settings": []
+}

@@ -1,0 +1,13 @@
+{
+  "id": "touchpad_locked",
+  "title": {
+    "en": "Locked by touchpad"
+  },
+  "args": [
+    {
+      "name": "device",
+      "type": "device",
+      "filter": "driver_id=YRD220|YRD256|YDD424|YFM40|YDM3168|YDM4109|YKFCON|YD01CON|YDCONL1|YDR446"
+    }
+  ]
+}

@@ -1,0 +1,43 @@
+{
+  "class": "lock",
+  "name": {
+    "en": "YFM40 Fingerprint Mortise Lock"
+  },
+  "capabilities": [
+    "locked"
+  ],
+  "images": {
+    "large": "/drivers/YFM40/assets/images/large.jpg",
+    "small": "/drivers/YFM40/assets/images/small.jpg"
+  },
+  "zwave": {
+    "manufacturerId": [
+      297
+    ],
+    "productTypeId": [
+      7
+    ],
+    "productId": [
+      0,
+      5
+    ],
+    "requireSecure": true,
+    "learnmode": {
+      "image": "/drivers/YFM40/assets/learnmode.svg",
+      "instruction": {
+        "en": "Enter your master pin and press R behind the lock, followed by 9# and 1#"
+      }
+    },
+    "unlearnmode": {
+      "image": "/drivers/YFM40/assets/learnmode.svg",
+      "instruction": {
+        "en": "Enter your master pin and press R behind the lock, followed by 9# and 3#"
+      }
+    },
+    "associationGroups": [
+      1
+    ],
+    "associationGroupsOptions": {}
+  },
+  "settings": []
+}

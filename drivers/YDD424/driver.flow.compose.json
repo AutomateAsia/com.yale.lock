@@ -1,0 +1,18 @@
+{
+  "triggers": [
+    {
+      "id": "button_unlocked",
+      "title": {
+        "en": "Unlocked by button"
+      },
+      "args": []
+    },
+    {
+      "id": "button_locked",
+      "title": {
+        "en": "Locked by button"
+      },
+      "args": []
+    }
+  ]
+}

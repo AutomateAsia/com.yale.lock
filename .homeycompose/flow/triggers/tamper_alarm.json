@@ -1,0 +1,31 @@
+{
+  "id": "tamper_alarm",
+  "title": {
+    "en": "The tamper alarm is set off"
+  },
+  "args": [
+    {
+      "name": "device",
+      "type": "device",
+      "filter": "driver_id=YRD220|YRD256|YDD424|YFM40|YDM3168|YDM4109|YKFCON|YD01CON|YDCONL1|YDR446"
+    },
+    {
+      "name": "alarmtype",
+      "type": "dropdown",
+      "values": [
+        {
+          "id": "1",
+          "label": {
+            "en": "Too many keypad attempts"
+          }
+        },
+        {
+          "id": "2",
+          "label": {
+            "en": "Lock damaged"
+          }
+        }
+      ]
+    }
+  ]
+}

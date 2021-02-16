@@ -1,0 +1,44 @@
+{
+  "class": "lock",
+  "name": {
+    "en": "YDR446 Assure Lock Keyless"
+  },
+  "capabilities": [
+    "locked"
+  ],
+  "images": {
+    "large": "/drivers/YDR446/assets/images/large.jpg",
+    "small": "/drivers/YDR446/assets/images/small.jpg"
+  },
+  "zwave": {
+    "manufacturerId": [
+      297
+    ],
+    "productTypeId": [
+      2,
+      32770
+    ],
+    "productId": [
+      521,
+      4096
+    ],
+    "requireSecure": true,
+    "learnmode": {
+      "image": "/drivers/YDR446/assets/learnmode.svg",
+      "instruction": {
+        "en": "Enter Master Pin and press the setting (gear icon), followed by 7, setting, 1 setting"
+      }
+    },
+    "unlearnmode": {
+      "image": "/drivers/YDR446/assets/learnmode.svg",
+      "instruction": {
+        "en": "Enter Master Pin and press the setting (gear icon), followed by 7, setting, 3 setting"
+      }
+    },
+    "associationGroups": [
+      1
+    ],
+    "associationGroupsOptions": {}
+  },
+  "settings": []
+}

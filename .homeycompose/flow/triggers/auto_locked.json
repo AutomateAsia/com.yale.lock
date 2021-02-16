@@ -1,0 +1,13 @@
+{
+  "id": "auto_locked",
+  "title": {
+    "en": "Auto Locked"
+  },
+  "args": [
+    {
+      "name": "device",
+      "type": "device",
+      "filter": "driver_id=YRD256|YDD424|YFM40|YDM3168|YDM4109|YKFCON|YD01CON|YDCONL1"
+    }
+  ]
+}

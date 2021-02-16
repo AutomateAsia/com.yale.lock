@@ -1,0 +1,44 @@
+{
+  "class": "lock",
+  "name": {
+    "en": "YDD424 Fingerprint Deadbolt"
+  },
+  "capabilities": [
+    "locked"
+  ],
+  "images": {
+    "large": "/drivers/YDD424/assets/images/large.jpg",
+    "small": "/drivers/YDD424/assets/images/small.jpg"
+  },
+  "zwave": {
+    "manufacturerId": [
+      297
+    ],
+    "productTypeId": [
+      199,
+      255
+    ],
+    "productId": [
+      0,
+      65535
+    ],
+    "requireSecure": true,
+    "learnmode": {
+      "image": "/drivers/YDD424/assets/learnmode.svg",
+      "instruction": {
+        "en": "Enter your master pin and press R behind the lock, followed by 9# and 1#"
+      }
+    },
+    "unlearnmode": {
+      "image": "/drivers/YDD424/assets/learnmode.svg",
+      "instruction": {
+        "en": "Enter your master pin and press R behind the lock, followed by 9# and 3#"
+      }
+    },
+    "associationGroups": [
+      1
+    ],
+    "associationGroupsOptions": {}
+  },
+  "settings": []
+}
